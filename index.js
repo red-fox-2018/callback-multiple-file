@@ -1,5 +1,5 @@
 const fs = require('fs');
-// var sleep = require('sleep');
+var sleep = require('sleep');
 
 function readFile(path, callback) {
   fs.readFile(path, 'utf-8', (err, data) => {
@@ -37,7 +37,8 @@ match_data('./parents.json', './childrens.json', (dataParents, dataChildrens) =>
     parent.childrens = childrenNames;
   });
 
-  console.log(dataParents)
+  sleep.sleep(5);
+  console.log(dataParents);
 });
 
 console.log("Notification : Data sedang diproses !");
